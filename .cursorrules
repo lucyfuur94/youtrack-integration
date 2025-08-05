@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "youtrack": {
+      "command": "npx",
+      "args": ["youtrack-mcp-integration"],
+      "env": {
+        "YOUTRACK_BASE_URL": "https://youtrack.access.mn",
+        "YOUTRACK_TOKEN": "your-youtrack-permanent-token",
+
+        "YOUTRACK_DEBUG": "true"
+      }
+    }
+  }
+} 

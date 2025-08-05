@@ -1,0 +1,76 @@
+{
+  "name": "youtrack-mcp-integration",
+  "version": "1.0.0",
+  "description": "A comprehensive Model Context Protocol (MCP) server for YouTrack integration with extensive tools for issue tracking, project management, and workflow automation",
+  "type": "module",
+  "main": "build/index.js",
+  "bin": {
+    "youtrack-mcp": "./build/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index.js",
+    "dev": "tsc && node build/index.js",
+    "watch": "tsc --watch",
+    "test": "jest",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "inspector": "npx @modelcontextprotocol/inspector node build/index.js",
+    "prepack": "npm run build",
+    "prepublishOnly": "npm run build",
+    "postinstall": "echo '✅ YouTrack MCP Server installed successfully! Use: youtrack-mcp --help'",
+    "install:global": "npm run build && npm install -g .",
+    "install:pnpm": "pnpm install",
+    "clean": "rm -rf node_modules build dist",
+    "test:npx": "npx youtrack-mcp --help",
+    "test:global": "youtrack-mcp --help"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "youtrack",
+    "issue-tracking",
+    "project-management",
+    "jetbrains",
+    "workflow",
+    "agile",
+    "claude"
+  ],
+  "author": "YouTrack MCP Contributors",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.6.0",
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0",
+    "eslint": "^8.54.0",
+    "jest": "^29.7.0",
+    "typescript": "^5.3.0"
+  },
+  "peerDependencies": {
+    "node": ">=18.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dikshantyadav/youtrack-integration.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dikshantyadav/youtrack-integration/issues"
+  },
+  "homepage": "https://github.com/dikshantyadav/youtrack-integration#readme",
+  "packageManager": "pnpm@8.0.0",
+  "files": [
+    "build/**/*",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ]
+} 

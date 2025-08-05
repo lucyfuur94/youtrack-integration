@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "youtrack": {
+      "command": "node",
+      "args": ["/path/to/youtrack-mcp/build/index.js"],
+      "env": {
+        "YOUTRACK_BASE_URL": "https://your-instance.youtrack.cloud",
+        "YOUTRACK_TOKEN": "your-permanent-token-here",
+        "YOUTRACK_DEBUG": "false"
+      }
+    }
+  }
+} 
